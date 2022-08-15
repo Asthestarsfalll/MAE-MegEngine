@@ -73,7 +73,7 @@ modelhub = hub.import_module(
 model = modelhub.MAE(
     patch_size=16, embed_dim=768, depth=12, num_heads=12,
     decoder_embed_dim=512, decoder_depth=8, decoder_num_heads=16,
-    mlp_ratio=4, norm_layer=partial(M.LayerNorm, eps=1e-6), **kwargs)
+    mlp_ratio=4, norm_layer=partial(M.LayerNorm, eps=1e-6))
 
 # load pretrained model
 pretrained_model = modelhub.mae_vit_base_patch16(pretrained=True)
